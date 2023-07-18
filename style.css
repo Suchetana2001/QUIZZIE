@@ -21,9 +21,9 @@ html{
 }
 
 .inner-div{
-    width: 55vw;
+    width: 40vw;
     background-color:rgb(255, 255, 255);
-    padding: 3rem 8rem;
+    padding: 3rem 6rem;
     border-radius: 1rem;
     box-shadow:0 1rem 1rem -0.7rem rgba(0,0,0,0.4);
 
@@ -31,8 +31,8 @@ html{
 
 .inner-div h2{ 
     font-size: 3.5rem;
-    font-weight: 600;
-    margin: 1.5rem 0 4rem 0;
+    font-weight: 400;
+    margin: 1rem 0 2.8rem 0;
 }
 
 .inner-div li{
@@ -40,9 +40,9 @@ html{
     padding: 0.3rem 1rem;
     border-radius: 2rem;
     border-width:0.3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     list-style: none;
     cursor: pointer;
 }
@@ -57,6 +57,7 @@ html{
 input{
     cursor:pointer;
 }
+
 
 #submit, .btn{
     padding: 1rem 3rem;
@@ -90,8 +91,8 @@ input{
 }
 
 #showScore h3{
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 400;
     color: black;
     text-align: center;
 
