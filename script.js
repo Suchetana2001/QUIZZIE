@@ -60,10 +60,19 @@ let score=0;
 const loadQuestion = () => {
     const questionList=quizDB[questionCount];
 
-    question.innerText = questionList.question;
+    /*question.innerText = questionList.question;
     option1.innerText = questionList.a;
     option2.innerText = questionList.b;
     option3.innerText = questionList.c;
+    option4.innerText = questionList.d;*/
+    question.innerText = questionList.question;
+    option1.parentElement.style.display = 'block';
+    option1.innerText = questionList.a;
+    option2.parentElement.style.display = 'block';
+    option2.innerText = questionList.b;
+    option3.parentElement.style.display = 'block';
+    option3.innerText = questionList.c;
+    option4.parentElement.style.display = 'block';
     option4.innerText = questionList.d;
 
 }
@@ -97,19 +106,25 @@ submit.addEventListener('click',()=>{
     questionCount++;
 
     deselectAll();
-    
     if(questionCount<quizDB.length){
         loadQuestion();
     }else{
+        question.innerText='';
+        option1.parentElement.style.display = 'none';
+        option2.parentElement.style.display = 'none';
+        option3.parentElement.style.display = 'none';
+        option4.parentElement.style.display = 'none';
+        submit.style.display ='none';
 
         showScore.innerHTML = `
-            <h3>You Scored ${score}/${quizDB.length} 🤩</h3>
+            <h3>♛<br>You Scored ${score}/${quizDB.length} 🤩</h3>
             <button class="btn" onclick="location.reload()">Play Again</button>
         `;
 
         showScore.classList.remove('scoreArea');
     }
 });
+
 
 
 
